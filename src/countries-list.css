@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Mono|PT+Sans');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+  font-family: 'PT Sans', sans-serif;
+  position: relative;
+}
+
+.loading-img {
+  clear: both;
+  display: block;
+  margin: 1rem auto;
+  max-width: 60px;
+}
+
+.main {
+  display: block;
+  margin: 2rem auto 0;
+  max-width: 992px;
+  position: relative;
+}
+
+.countries-search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1.5rem auto;
+  width: 300px;
+}
+
+@media all and (min-width: 768px) {
+  .countries-search {
+    margin: 2.5rem auto;
+    width: 250px;
+  }
+}
+
+.countries-search>label {
+  display: inline-block;
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0 auto .5rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media all and (min-width: 768px) {
+  .countries-search>label {
+    font-size: 16px;
+  }
+}
+
+.countries-list {
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 67, 115, 0.2);
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 0;
+  width: 98%;
+}
+
+@media all and (min-width: 992px) {
+  .countries-list {
+    width: 100%;
+  }
+}
+
+.list-title {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.countries-list {
+  border-radius: 5px;
+}
+
+.countries-list li:last-of-type {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+@media all and (min-width: 768px) {
+
+  .countries-list,
+  .countries-list li:last-of-type {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+}
+
+.list-content {
+  transition: .5s all linear;
+}
+
+.countries-list>li>a {
+  color: #057081;
+  margin: 0.5rem auto;
+  position: relative;
+  text-align: center;
+  width: 66%;
+}
+
+@media all and (min-width: 992px) {
+  .countries-list>li>a {
+    margin: 0 auto;
+    width: 75%;
+  }
+
+  .countries-list>li>a:hover {
+    transition: linear .5s all;
+  }
+}
+
+.countries-list>li {
+  align-items: center;
+  background: #f6f6f6;
+  border: .1rem solid #dcdcdc;
+  display: grid;
+  list-style-type: none;
+  margin: 0;
+  min-height: 345px;
+  padding: .85rem;
+  position: relative;
+  width: 50%;
+}
+
+.country-details .countries-list>li {
+  width: 100%;
+}
+
+.countries-list>li:nth-of-type(2n) {
+  background: #fff;
+}
+
+.country-details .countries-list>li:nth-of-type(2n) {
+  background: #fff;
+}
+
+@media all and (min-width: 768px) {
+  .countries-list>li {
+    border-top: 0;
+    min-height: 100px;
+    padding: 0;
+    width: 100%;
+  }
+}
+
+@media all and (min-width: 992px) {
+  .countries-list>li {
+    position: relative;
+  }
+}
+
+.countries-list>li.list-title {
+  display: none;
+}
+
+@media all and (min-width: 768px) {
+  .countries-list>li.list-title {
+    background: #e0e0e0;
+    border-top: .1rem solid #dcdcdc;
+    display: grid;
+    min-height: 100%;
+  }
+
+  .countries-list>li.list-title span {
+    color: #5e5e5e;
+    font-size: 16px;
+    font-weight: 700;
+    padding: .33rem 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .countries-list>li {
+    grid-template-columns: 13% 18% 11% 58%;
+  }
+  
+  .country-details>.countries-list>li {
+    grid-template-columns: 13% 18% 11% 44% 13.5%;
+  }
+}
+
+@media all and (min-width: 992px) {
+  .countries-list>li {
+    grid-template-columns: 14% 22% 12% 51%;
+  }
+
+  .country-details>.countries-list>li {
+    grid-template-columns: 13% 18% 11% 43.3% 14.65%;
+  }
+}
+
+.countries-list>li span {
+  font-size: 17px;
+  margin: .5rem 0;
+}
+
+.country-details .countries-list>li span {
+  font-size: 17px;
+}
+
+@media all and (min-width: 768px) {
+  .country-details .countries-list>li span,
+  .countries-list>li span {
+    font-size: 14px;
+  }
+}
+
+.countries-list>li .country-img>img {
+  display: block;
+  margin: 0 auto;
+  width: 125px;
+}
+
+@media all and (min-width: 600px) {
+  .countries-list>li .country-img>img {
+    width: 180px;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .countries-list>li .country-img>img {
+    width: 75px;
+  }
+}
+
+.countries-list>li .country-description,
+.countries-list>li .country-name {
+  padding: 0;
+}
+
+.countries-list>li .country-name,
+.countries-list>li .country-official {
+  text-align: center;
+}
+
+.country-details .countries-list>li a,
+.countries-list>li .country-description,
+.countries-list>li .country-official span {
+  color: #5e5e5e;
+}
+
+.countries-list>li a .country-name,
+.country-details .countries-list>li a .country-name {
+  font-weight: 700;
+}
+
+.countries-list>li .country-description {
+  font-size: 17px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 150%;
+  padding-left: 0;
+  width: 98%;
+}
+
+.country-details .countries-list {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.country-details .countries-list>li .country-description {
+  font-size: 17px;
+  text-overflow: unset;
+  white-space: normal;
+}
+
+@media all and (min-width: 768px) {
+  .country-details .countries-list>li .country-description,
+  .countries-list>li .country-description {
+    font-size: 13px;
+    padding-left: .75rem;
+    text-overflow: unset;
+    white-space: normal;
+  }
+
+  .country-details .countries-list>li .country-description,
+  .countries-list>li .country-description,
+  .country-details .countries-list {
+    width: 94%;
+  }
+}
+
+@media all and (min-width: 992px) {
+  .country-details .countries-list>li .country-description,
+  .countries-list>li .country-description,
+  .country-details .countries-list {
+    width: 100%;
+  }
+}
+
+.countries-list>li.hideParent {
+  display: none;
+}
+
+.goback-btn {
+  background: #ca1e00;
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  margin: 1rem 0 0 10%;
+  padding: .55rem 0 .45rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: linear .5s all;
+  width: 110px;
+}
+
+@media all and (min-width: 768px) {
+  .goback-btn {
+    margin: 1rem 0 0 1.65rem;
+  }
+}
+
+@media all and (min-width: 992px) {
+  .goback-btn {
+    margin: 1rem 0 0 .4rem;
+  }
+}
+
+@media all and (min-width: 992px) {
+  .goback-btn:hover {
+    background: #990a00;
+  }
+}

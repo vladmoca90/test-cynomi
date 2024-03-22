@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+#pagination {
+    font-family: "Roboto", sans-serif;
+}
+
+.pagination-list {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: center;
+    margin: 1.25rem auto;
+    padding: 0;
+    width: 90%;
+}
+
+@media all and (min-width: 768px) {
+    .pagination-list {
+        width: auto;
+    }
+}
+
+.pagination-list .pagination-item {
+    background: #ccc;
+    font-family: 'PT Sans', sans-serif;
+    opacity: .55;
+}
+
+.pagination-list .pagination-item.active {
+    background: #ccc;
+    opacity: 1;
+}
+
+.pagination-list .pagination-item>a {
+    align-items: center;
+    color: #222;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 16px;
+    height: 40px;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    width: 40px;
+}
+
+@media all and (min-width: 768px) {
+    .pagination-list .pagination-item>a {
+        font-size: 16px;
+        height: 45px;
+        width: 45px;
+    }
+}
+
+.prev-item>a,
+.next-item>a,
+.pagination-list .pagination-item.active>a {
+    color: #353535;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.pagination-list .pagination-item.prev-item>a,
+.pagination-list .pagination-item.next-item>a {
+    color: #fff;
+}
+
+.pagination-list .pagination-item.prev-item,
+.pagination-list .pagination-item.next-item {
+    opacity: 1;
+}
+
+.pagination-list .pagination-item.prev-item {
+    background: #bb1c00;
+}
+
+.pagination-list .pagination-item.next-item {
+    background: #046c04;
+}
+
+.country-details .countries-list>li a,
+.pagination-list .pagination-item.prev-item.prev-disabled,
+.pagination-list .pagination-item.next-item.next-disabled {
+  pointer-events: none;
+  text-decoration: none;
+}
+
+.pagination-list .pagination-item.prev-item.prev-disabled,
+.pagination-list .pagination-item.next-item.next-disabled {
+    opacity: .65;
+}
